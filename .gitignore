@@ -102,3 +102,11 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.thonny/
+*.csv
+bin/
+etc/
+lib64
+pyvenv.cfg
+share/
+uPyLoader-linux
