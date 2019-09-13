@@ -1,5 +1,5 @@
 esphome:
-  name: "node_1"
+  name: "esphome_sonoff_switch2"
   platform: ESP8266
   board: esp01_1m
 
@@ -23,6 +23,14 @@ binary_sensor:
       mode: INPUT_PULLUP
       inverted: True
     name: "Sonoff Basic Button"
+    on_press:
+      - switch.toggle: relay
+  - platform: gpio
+    pin:
+      number: GPIO14
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "GPIO14"
     on_press:
       - switch.toggle: relay
 
