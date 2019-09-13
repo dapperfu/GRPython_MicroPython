@@ -2,3 +2,6 @@ jupyter
 notebook
 flask
 thonny
+esphome
+git+https://github.com/esphome/aioesphomeapi.git
+homeassistant
