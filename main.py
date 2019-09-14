@@ -6,21 +6,16 @@ rtc.irq(trigger=rtc.ALARM0, wake=machine.DEEPSLEEP)
 # check if the device woke from a deep sleep
 if machine.reset_cause() == machine.DEEPSLEEP_RESET:
     print("woke from a deep sleep")
-
-green_pin=12
-green = machine.PWM(machine.Pin(green_pin))
-green.freq(1)
-green.duty(512))
+green = machine.Pin(12)
+green.off()
 
 blue_pin = 13
-blue = machine.PWM(machine.Pin(blue_pin))
-blue.freq(2)
-blue.duty(512)
+blue = machine.Pin(blue_pin)
+blue.off()
 
 red_pin = 15
-red = machine.PWM(machine.Pin(red_pin))
-red.freq(10)
-red.duty(512)
+red = machine.Pin(red_pin)
+red.off()
 
 # Light Sensor.
 from machine import ADC
@@ -50,12 +45,7 @@ import urequests
 # put the device to sleep
 # machine.deepsleep()
 
-while True:
-    try:
-        r=urequests.get("http://192.168.1.92:5000/light_sensor/{}".format(adc.read()))
-        print(r.json())
-    except KeyboardInterrupt:
-        break
-    except:
-        pass
-    time.sleep(1)  # sleep for 1 second
+try:
+    urequests.get("http://192.168.8.228:5000/light_sensor/{}".format(adc.read()))
+except:
+    pass
