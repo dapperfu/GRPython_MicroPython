@@ -46,7 +46,7 @@ esp8266-20190529-v1.11.bin:
 PORT:=/dev/ttyUSB9
 .PHONY: flash
 flash: micropython
-	esptool.py --before default_reset --after hard_reset --baud 115200 --chip esp8266 --port ${PORT} write_flash 0x0 ${BIN}
+	bin/esptool.py --before default_reset --after hard_reset --baud 115200 --chip esp8266 --port ${PORT} write_flash 0x0 ${BIN}
 
 .PHONY: erase
 erase:

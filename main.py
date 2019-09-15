@@ -26,10 +26,10 @@ blue_pwm.freq(1)
 # Light Sensor.
 adc = machine.ADC(0)
 
-import network
-import secrets
 import time
 
+import network
+import secrets
 def connect_network():
     wlan = network.WLAN(network.STA_IF)  # create station interface
     wlan.active(True)  # activate the interface
@@ -40,8 +40,8 @@ def connect_network():
         time.sleep(1)
     print("... Done!")
     print(wlan.ifconfig())  # get the interface's IP/netmask/gw/DNS addresses
-
 connect_network()
+
 import urequests
 
 while True:
