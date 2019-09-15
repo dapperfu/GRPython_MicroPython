@@ -2,13 +2,22 @@
 
 *NoSQL IoT Data Acquisition with Python Microservices with Cloud and Edge Computing.*
 
+Demo Wifi:
+
+- SSID: ```GRPUG_Demo```
+- Password: ```0xdeadbeef```
+
+![https://qifi.org/](.GRPUG_Demo-qrcode.png)
+
 ## Project Setup.
 
   git clone https://github.com/jed-frey/GRPython_MicroPython.git
   git submodule update --init
-  
-Python is uses python3.7 and a virtual environment in the GRPython_MicroPython folder.
-  
+
+Python is uses python3.7 and creates virtual environment in the GRPython_MicroPython folder. It is entirely contained to the checkout directory.
+
+Removal: Delete ```GRPython_MicroPython```
+
 # Repository Commands.
 
 - ```make venv``` setup a virtual environment.
