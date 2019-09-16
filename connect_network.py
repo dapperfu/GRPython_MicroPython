@@ -10,4 +10,4 @@ def connect_network():
         time.sleep(1)
     print("... Done!")
     print(wlan.ifconfig())  # get the interface's IP/netmask/gw/DNS addresses
-connect_network()
+connect_network.connect_network()

@@ -1,3 +1,6 @@
 [submodule "webrepl"]
 	path = webrepl
 	url = https://github.com/micropython/webrepl.git
+[submodule "micropython-hcsr04"]
+	path = micropython-hcsr04
+	url = https://github.com/rsc1975/micropython-hcsr04.git
