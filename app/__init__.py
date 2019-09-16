@@ -22,9 +22,11 @@ def log_sensor(sensor, value):
  
     # Cloud Computing
     led_status = {
-        "green": int(value),
+        "green": 0,
         "red": 0,
         "blue": 0,
     }
+    d = datetime.datetime.now()
+    rtc_sync = (d.year, d.month, d.day, d.hour, d.minute, d.second, d.microsecond)
 
-    return jsonify(led_status)
+    return jsonify([rtc_sync, led_status])
