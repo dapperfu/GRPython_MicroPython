@@ -3,3 +3,5 @@ notebook
 flask
 thonny
 git+https://github.com/goatchurchprime/jupyter_micropython_kernel.git
+rshell
+

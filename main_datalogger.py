@@ -43,19 +43,19 @@ connect_network()
 
 import urequests
 
+green_pwm.freq(1)
 while True:
+    try: 
+        green_pwm.freq(1)
+        green_pwm.duty(int(1024-adc.read()))
+    except:
+        continue
     try:
         # If the internet is down, this doesn't work so great.
-"""
-        r=urequests.get("http://192.168.8.193:5000/light_sensor/{}".format(adc.read()))
-        green_pwm.freq(1)
-        green_pwm.duty(int(r.json()["green"]))
-"""
+        r=urequests.get("http://192.168.1.92:5000/light_sensor/{}".format(adc.read()))
         # "Edge Computing"
-        green_pwm.freq(1)
-        
     except KeyboardInterrupt:
         break
     except:
         pass
-    time.sleep(1)
+    time.sleep(5)
